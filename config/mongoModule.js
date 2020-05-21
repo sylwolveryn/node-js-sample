@@ -44,7 +44,7 @@ var achievementSeeder = require('../app/achievementsSeeder');
         console.log(err);
     });
 
-    mongoose.connection.db.on('reconnect', function (ref) {
+    mongoose.connection.on('reconnect', function (ref) {
         connected=true;
         console.log('reconnect to mongo server.');
     });
